@@ -7,7 +7,7 @@ import { MongoClient, ObjectId } from "mongodb";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, ".env") });
-const frontendDirectory = path.resolve(__dirname, "frontend");
+const frontendDirectory = path.resolve(__dirname);
 const configuredMongoUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
 const mongoUri = /^(mongodb|mongodb\+srv):\/\//.test(configuredMongoUri)
     ? configuredMongoUri
